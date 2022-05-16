@@ -101,53 +101,53 @@ CREATE TABLE [dbo].[remotes] (
 GO
 
 
-ALTER TABLE [employees] ADD FOREIGN KEY ([block_id]) REFERENCES [blocks] ([id])
+ALTER TABLE [dbo].[employees] ADD FOREIGN KEY ([block_id]) REFERENCES [dbo].[blocks] ([id])
 GO
 
-ALTER TABLE [employees] ADD FOREIGN KEY ([position_id]) REFERENCES [positions] ([id])
+ALTER TABLE [dbo].[employees] ADD FOREIGN KEY ([position_id]) REFERENCES [dbo].[positions] ([id])
 GO
 
-ALTER TABLE [orders] ADD FOREIGN KEY ([pc_id]) REFERENCES [pcs] ([id])
+ALTER TABLE [dbo].[orders] ADD FOREIGN KEY ([pc_id]) REFERENCES [dbo].[pcs] ([id])
 GO
 
-ALTER TABLE [orders] ADD FOREIGN KEY ([customer_id]) REFERENCES [customers] ([id])
+ALTER TABLE [dbo].[orders] ADD FOREIGN KEY ([customer_id]) REFERENCES [dbo].[customers] ([id])
 GO
 
-ALTER TABLE [orders] ADD FOREIGN KEY ([employee_id]) REFERENCES [employees] ([id])
+ALTER TABLE [dbo].[orders] ADD FOREIGN KEY ([employee_id]) REFERENCES [dbo].[employees] ([id])
 GO
 
-ALTER TABLE [orders] ADD FOREIGN KEY ([job_id]) REFERENCES [jobs] ([id])
+ALTER TABLE [dbo].[orders] ADD FOREIGN KEY ([job_id]) REFERENCES [dbo].[jobs] ([id])
 GO
 
-ALTER TABLE [units] ADD FOREIGN KEY ([order_id]) REFERENCES [orders] ([id])
+ALTER TABLE [dbo].[units] ADD FOREIGN KEY ([order_id]) REFERENCES [dbo].[orders] ([id])
 GO
 
-ALTER TABLE [units] ADD FOREIGN KEY ([pc_id]) REFERENCES [pcs] ([id])
+ALTER TABLE [dbo].[units] ADD FOREIGN KEY ([pc_id]) REFERENCES [dbo].[pcs] ([id])
 GO
 
-ALTER TABLE [moves] ADD FOREIGN KEY ([prev_move_id]) REFERENCES [moves] ([id])
+ALTER TABLE[dbo].[moves] ADD FOREIGN KEY ([prev_move_id]) REFERENCES [dbo].[moves] ([id])
 GO
 
-ALTER TABLE [moves] ADD FOREIGN KEY ([employee_id]) REFERENCES [employees] ([id])
+ALTER TABLE [dbo].[moves] ADD FOREIGN KEY ([employee_id]) REFERENCES [dbo].[employees] ([id])
 GO
 
-ALTER TABLE [moves] ADD FOREIGN KEY ([block_id]) REFERENCES [blocks] ([id])
+ALTER TABLE [dbo].[moves] ADD FOREIGN KEY ([block_id]) REFERENCES [dbo].[blocks] ([id])
 GO
 
-ALTER TABLE [moves] ADD FOREIGN KEY ([order_id]) REFERENCES [orders] ([id])
+ALTER TABLE [dbo].[moves] ADD FOREIGN KEY ([order_id]) REFERENCES [dbo].[orders] ([id])
 GO
 
-ALTER TABLE [remotes] ADD FOREIGN KEY ([transport_id]) REFERENCES [transports] ([id])
+ALTER TABLE [dbo].[remotes] ADD FOREIGN KEY ([transport_id]) REFERENCES [dbo].[transports] ([id])
 GO
 
-ALTER TABLE [remotes] ADD FOREIGN KEY ([driver_id]) REFERENCES [employees] ([id])
+ALTER TABLE [dbo].[remotes] ADD FOREIGN KEY ([driver_id]) REFERENCES [dbo].[employees] ([id])
 GO
 
-ALTER TABLE [remotes] ADD FOREIGN KEY ([order_id]) REFERENCES [orders] ([id])
+ALTER TABLE [dbo].[remotes] ADD FOREIGN KEY ([order_id]) REFERENCES [dbo].[orders] ([id])
 GO
 
-ALTER TABLE [positionjobs] ADD FOREIGN KEY ([position_id]) REFERENCES [positions] ([id])
+ALTER TABLE [dbo].[positionjobs] ADD FOREIGN KEY ([position_id]) REFERENCES [dbo].[positions] ([id])
 GO
 
-ALTER TABLE [positionjobs] ADD FOREIGN KEY ([job_id]) REFERENCES [jobs] ([id])
+ALTER TABLE [dbo].[positionjobs] ADD FOREIGN KEY ([job_id]) REFERENCES [dbo].[jobs] ([id])
 GO
